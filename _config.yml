@@ -185,7 +185,6 @@ exclude:
   - /node_modules
   - /screenshots
   - /test
-  - /vendor
 
 defaults:
   - scope:
