@@ -255,7 +255,7 @@
             </div>
         </div>
     </div>
-    <div class="py-20 md:py-24 bg-dark dark:bg-dark bg-[url('/img/bg-help.svg')] bg-no-repeat bg-left-bottom bg-contain lg:bg-auto 2xl:bg-cover"
+    <div class="py-20 md:py-24 bg-dark dark:bg-dark bg-[url('./assets/img/bg-help.svg')] bg-no-repeat bg-left-bottom bg-contain lg:bg-auto 2xl:bg-cover"
          id="help">
         <div class="container mx-auto px-4">
             <div class="lg:w-1/2 2xl:w-1/2 mx-auto text-center">
@@ -274,7 +274,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-white dark:bg-[url('/img/bg-support-dark.svg')] bg-center bg-cover bg-no-repeat dark:bg-dark pt-24 pb-10 md:py-32"
+    <div class="bg-white dark:bg-[url('./assets/img/bg-support-dark.svg')] bg-center bg-cover bg-no-repeat dark:bg-dark pt-24 pb-10 md:py-32"
          id="support">
         <div class="container flex flex-col lg:flex-row items-center justify-around px-4 mx-auto">
             <div class="lg:w-1/2 2xl:w-1/2 mr-8 basis-1/2">
@@ -309,7 +309,7 @@
             </div>
             <div class="img mt-24 lg:mt-0 ml-8 basis-1/2">
                 <div class="">
-                    <img src="img/iPad-Pro-Design-Mockup.png" class="w-full" alt="Ipad">
+                    <img src="./assets/img/iPad-Pro-Design-Mockup.png" class="w-full" alt="Ipad">
                 </div>
             </div>
         </div>
@@ -317,8 +317,8 @@
     <div class="py-16 pt-10 md:py-20 bg-white dark:bg-dark" id="workflow">
         <div class="container flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 md:px-8 mx-auto ">
             <div class="relative px-4 lg:px-16 basis-1/2 ">
-                <img src="./img/team-workflow.png" alt="img" style="border-radius: 50%100px" class="sticky z-10">
-                <img src="./img/vector1.svg" alt=""
+                <img src="./assets/img/team-workflow.png" alt="img" style="border-radius: 50%100px" class="sticky z-10">
+                <img src="./assets/img/vector1.svg" alt=""
                      class="absolute bottom-1 right-2 md:right-7 w-40 md:w-60 -rotate-[190deg]">
             </div>
             <div class="relative mt-0 md:mt-16 lg:mt-0 basis-1/2 ">
@@ -334,7 +334,7 @@
                     <div class="flex items-center justify-between my-4">
                         <div class="tools-box">
                             <div class="basis-1/3">
-                                <img src="./img/slack-logo.png" alt="img" class="w-2/3">
+                                <img src="./assets/img/slack-logo.png" alt="img" class="w-2/3">
                             </div>
                             <div class="basis-2/3">
                                 <h4 class="workflow-title">Slack</h4>
@@ -343,7 +343,7 @@
                         </div>
                         <div class="tools-box">
                             <div class="basis-1/3">
-                                <img src="./img/dropbox-logo.png" alt="img" class="w-2/3">
+                                <img src="./assets/img/dropbox-logo.png" alt="img" class="w-2/3">
                             </div>
                             <div class="basis-2/3">
                                 <h4 class="workflow-title">DropBox</h4>
@@ -354,7 +354,7 @@
                     <div class="flex items-center justify-between my-4">
                         <div class="tools-box">
                             <div class="basis-1/3">
-                                <img src="./img/hubstaff-logo.png" alt="img" class="w-2/3">
+                                <img src="./assets/img/hubstaff-logo.png" alt="img" class="w-2/3">
                             </div>
                             <div class="basis-2/3">
                                 <h4 class="workflow-title">Slack</h4>
@@ -363,7 +363,7 @@
                         </div>
                         <div class="tools-box">
                             <div class="basis-1/3">
-                                <img src="./img/Sketch_Logo.png" alt="img" class="w-2/3">
+                                <img src="./assets/img/Sketch_Logo.png" alt="img" class="w-2/3">
                             </div>
                             <div class="basis-2/3">
                                 <h4 class="workflow-title">DropBox</h4>
@@ -738,8 +738,8 @@
             <div class="container flex md:flex-row flex-wrap lg:flex-nowrap items-start justify-between px-4 mx-auto">
                 <div class="basis-full lg:basis-1/3 mb-6 lg:mb-0">
                     <div class="footer-logo mb-7">
-                        <img src="./img/logo-light.svg" alt="logo" class="hidden dark:block">
-                        <img src="./img/logo.svg" alt="logo" class="block dark:hidden">
+                        <img src="./assets/img/logo-light.svg" alt="logo" class="hidden dark:block">
+                        <img src="./assets/img/logo.svg" alt="logo" class="block dark:hidden">
                     </div>
                     <p class="text-gray-500 dark:text-gray-400 opacity-90 text-lg">Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit. A alias atque aut, consequatur
