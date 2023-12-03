@@ -791,7 +791,6 @@
                 </div>
             </div>
         </div>
-        {% include footer.html %}
     </div>
 </div>
 <script src="./assets/js/script.js"></script>
