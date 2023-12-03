@@ -4,7 +4,7 @@
       <script src="{{ .RelPermalink }}"></script>
     {{- end }}
   {{- else }}
-    {{- $opts := dict "minify" true }}
+    {{- $opts := dict "minify" false }}
     {{- with . | js.Build $opts | fingerprint }}
       <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
     {{- end }}
