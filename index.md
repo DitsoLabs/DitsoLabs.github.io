@@ -791,11 +791,7 @@
                 </div>
             </div>
         </div>
-        <div class="copy-right bg-[#4A6CF7] bg-opacity-10 p-8">
-            <div class="container mx-auto text-gray-500 dark:text-gray-400 text-center text-base font-bold">
-                <p>© by Farideghbali for You! - <a href="https://farideghbali.com">Developer: Farideghbali.com</a></p>
-            </div>
-        </div>
+        {% include footer.html %}
     </div>
 </div>
 <script src="./assets/js/script.js"></script>
