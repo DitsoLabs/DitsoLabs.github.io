@@ -1,0 +1,39 @@
+<aside class="sidebar">
+    <section class="conference-bucket">
+      <header class="header">
+        <h2 class="header__headline">Blog</h2>
+      </header>
+      <ul class="conference-bucket__conferences">
+        {% assign limite = 5 %}
+        {% for post in site.posts limit:limite %}
+        {% if post.show == true %}
+        <li class="conference-bucket__conference">
+          <h3 class="conference-bucket__conference__name">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="conference-bucket__conference__meta">{{post.date | date: '%d/%m/%Y'}}</p>
+        </li>
+        {% else %}
+        {% assign limite = limite | plus: 1 %}
+        {% endif %}
+        {% endfor %}
+      </ul>
+  </section>
+
+  <section class="conference-bucket">
+      <header class="header">
+        <h2 class="header__headline">Eventos</h2>
+      </header>
+      <ul class="conference-bucket__conferences">
+        {% for event in site.events limit:5 %}
+        <li class="conference-bucket__conference">
+          <h3 class="conference-bucket__conference__name">
+            <a href="{{ event.url | relative_url }}" target="_blank">{{ event.title }}</a>
+          </h3>
+          <p class="conference-bucket__conference__meta">{{event.eventdate | date: '%d/%m/%Y %H:%M'}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+  </section>
+
+  </aside>

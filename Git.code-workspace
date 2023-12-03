@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"markdown-image.base.uploadMethod": "Imgur",
+		"markdown-image.imgur.clientId": "6601fb26a2ce88e"
+	}
+}

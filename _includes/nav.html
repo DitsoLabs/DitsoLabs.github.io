@@ -1,0 +1,164 @@
+<nav id="main-navigation" class="site-head__nav site-head__nav--main">
+    <button
+      class="site-head__nav__show-hide site-head__nav--main__show-hide"
+    >
+      Menu
+    </button>
+    <ul id="menu-main-navigation" class="menu">
+      <li
+        id="menu-item-63"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-63"
+      >
+        <a href="">Proyectos</a>
+        <ul class="sub-menu">
+          {% for project in site.projects %}
+          <li
+            id="menu-item-{{ project.id }}"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-{{ project.id }}"
+          >
+            <a href="{{ project.url }}">{{ project.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li
+        id="menu-item-62"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"
+      >
+        <a href="/events/">Eventos</a>
+      </li>
+      <li
+        id="menu-item-61"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61"
+      >
+        <a href="/blog/">Blog</a>
+      </li>
+      <li
+        id="menu-item-58"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-58"
+      >
+        <a href="https://ieee-npss.org/publications/">Publicaciones NPSS</a>
+        <ul class="sub-menu">
+          <li
+            id="menu-item-2489"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"
+          >
+            <a
+              href="https://ieee-npss.org/publications/transactions-on-nuclear-science/"
+              >Transactions on Nuclear Science</a
+            >
+          </li>
+          <li
+            id="menu-item-2490"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2490"
+          >
+            <a
+              href="https://ieee-npss.org/publications/transactions-on-plasma-science/"
+              >Transactions on Plasma Science</a
+            >
+          </li>
+          <li
+            id="menu-item-2488"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2488"
+          >
+            <a
+              href="https://ieee-npss.org/publications/transactions-on-medical-imaging/"
+              >Transactions on Medical Imaging</a
+            >
+          </li>
+          <li
+            id="menu-item-2666"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2666"
+          >
+            <a
+              href="https://ieee-npss.org/publications/transactions-on-radiation-and-plasma-medical-sciences/"
+              >Transactions on Radiation and Plasma Medical Sciences</a
+            >
+          </li>
+          <li
+            id="menu-item-3001"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3001"
+          >
+            <a href="https://ieee-npss.org/publications/"
+              >NPSS Newsletter Archive</a
+            >
+          </li>
+          <li
+            id="menu-item-4069"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4069"
+          >
+            <a href="https://ieee-npss.org/plasma-connections/"
+              >Plasma Connections</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li
+        id="menu-item-2480"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2480"
+      >
+        <a href="">Comunidad</a>
+        <ul class="sub-menu">
+          <li
+            id="menu-item-2484"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"
+          >
+            <a href="https://www.facebook.com/NPSSITCR/">Facebook</a>
+          </li>
+          <li
+            id="menu-item-4015"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4015"
+          >
+            <a
+              href="https://www.instagram.com/npss_tec/"
+              >Instagram</a
+            >
+          </li>
+          <li
+            id="menu-item-2486"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"
+          >
+            <a href="/contacto/" blank="true"
+              >Contáctenos</a
+            >
+          </li>
+          <li
+            id="menu-item-2485"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"
+          >
+            <a href="/unete/"
+              >Únete a la NPSS</a
+            >
+          </li>
+          <li
+            id="menu-item-3635"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3635"
+          >
+            <a href="https://discord.gg/fDsndeRa97"
+              >Discord</a
+            >
+          </li>
+          <li
+            id="menu-item-2483"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2483"
+          >
+            <a href="/membresias-estudiantes/"
+              >Membresía gratis para estudiantes</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li
+        id="menu-item-60"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"
+      >
+        <a href="/sobre/">Sobre nosotros</a>
+      </li>
+      <li
+        id="menu-item-60"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"
+      >
+        <a href="/colabora/">Colabora</a>
+      </li>
+    </ul>
+  </nav>

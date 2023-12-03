@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    {% include header.html %}
+  </head>
+  <body>
+    <main id="main-content" class="site-content">
+      <article
+        class="page-content post-64 page type-page status-publish hentry">
+        <header class="entry-header">
+          <h1 class="entry-title">{{ page.name }}</h1>
+          <p class="page__subtitle">{{page.position}}</p>
+        </header>
+        <div class="entry-content">{{ content }}</div>
+        <h2>Posts</h2>
+        <ul>
+          {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+          {% for post in filtered_posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </article>
+        {% include side.html %}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
