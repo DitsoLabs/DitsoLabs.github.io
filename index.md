@@ -1,16 +1,6 @@
 <!doctype html>
 <html lang="en" class="dark scroll-smooth" id="root">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="farideghbali">
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="./assets/css/output.css">
-    <title>Startup Landing Page - Tailwind</title>
-    <!-- Develoop By: Farideghbali / Farideghbali.com / Farideghbali.dev@gmail.com   -->
-</head>
+{% include header.html %}
 <body class="bg-white dark:bg-dark seceltion font-Inter">
 {% include nav.html %}
 <div class="main" id="main">
