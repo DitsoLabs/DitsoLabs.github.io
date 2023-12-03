@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en" class="dark scroll-smooth" id="root">
 {% include header.html %}
 <body class="bg-white dark:bg-dark seceltion font-Inter">
