@@ -1,7 +1,4 @@
 <html lang="en" class="dark scroll-smooth" id="root">
-{% include header.html %}
-<body class="bg-white dark:bg-dark seceltion font-Inter">
-{% include nav.html %}
 <div class="main" id="main">
     <div class="relative flex items-center h-screen px-4 lg:px-0 bg-white dark:bg-dark" id="slider">
         <div class="sticky z-10 w-full lg:w-2/5 2xl:w-1/2 mx-auto text-center mt-20">
@@ -794,5 +791,4 @@
     </div>
 </div>
 <script src="./assets/js/script.js"></script>
-</body>
 </html>
