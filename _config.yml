@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Nuclear & Plasma Sciences Society de Costa Rica
+title: Ditso Labs
 email: fabian.alvarez@ieee.org
 description: >- # this means to ignore newlines until "baseurl:"
   La Nuclear & Plasma Sciences Society de Costa Rica (NPSSCR) es una sociedad científica sin fines de lucro perteneciente a IEEE,
