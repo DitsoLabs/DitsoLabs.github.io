@@ -1,12 +1,10 @@
 <div class="main" id="main">
     <div class="relative flex items-center h-screen px-4 lg:px-0 bg-white dark:bg-dark" id="slider">
         <div class="sticky z-10 w-full lg:w-2/5 2xl:w-1/2 mx-auto text-center mt-20">
-            <h1 class="heading text-3xl lg:text-5xl !leading-normal">Startup
-                Focused Tailwind CSS Template
+            <h1 class="heading text-3xl lg:text-5xl !leading-normal">Ditso Labs la semilla de la innovación
             </h1>
-            <p class="text-neutral-600 dark:text-gray-400 text-xl font-medium leading-normal my-4">A Complete Tailwind
-                CSS Web Template Crafted for - Startup, SaaS, Business, Software and Agencies. Comes with high-quality
-                design and everything you need!
+            <p class="text-neutral-600 dark:text-gray-400 text-xl font-medium leading-normal my-4">La mision de Ditso
+                Labs es crear soluciones tecnologicas que ayuden a las personas a mejorar su calidad de vida.
             </p>
             <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
                 <a href="#pricing" class="btn bg-[#4a6cf7]">Get Started</a>
