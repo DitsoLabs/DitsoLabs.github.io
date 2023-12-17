@@ -4,13 +4,12 @@
             <h1 class="heading text-3xl lg:text-5xl !leading-normal">Ditso Labs la semilla de la innovación
             </h1>
             <p class="text-neutral-600 dark:text-gray-400 text-xl font-medium leading-normal my-4">La mision de Ditso
-                Labs es crear soluciones tecnologicas que ayuden a las personas a mejorar su calidad de vida.
+                Labs es crear soluciones tecnológicas que ayuden a las personas a mejorar su calidad de vida.
             </p>
             <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
-                <a href="#pricing" class="btn bg-[#4a6cf7]">Get Started</a>
+                <a href="#pricing" class="btn bg-[#4a6cf7]">Iniciar</a>
                 <a href="#features"
-                   class="btn bg-[#090E34] text-neutral-900 bg-opacity-20 hover:bg-opacity-30 dark:bg-[#ffff64] dark:bg-opacity-10 dark:hover:bg-opacity-5">Learn
-                    More</a>
+                   class="btn bg-[#090E34] text-neutral-900 bg-opacity-20 hover:bg-opacity-30 dark:bg-[#ffff64] dark:bg-opacity-10 dark:hover:bg-opacity-5">Aprende más</a>
             </div>
         </div>
         <div class="absolute top-0 right-0">
@@ -116,11 +115,10 @@
     <div class="py-20 md:py-24 bg-[#efefef] dark:bg-[#0b113a]" id="features">
         <div class="container px-4 mx-auto">
             <div class="w-full lg:w-1/2 2xl:w-1/2 mx-auto text-center">
-                <h2 class="heading text-3xl lg:text-5xl !leading-normal">Main
-                    Features
+                <h2 class="heading text-3xl lg:text-5xl !leading-normal">Proyectos
                 </h2>
-                <p class="text-gray-500 dark:text-gray-400 text-xl">There are many variations of passages of Lorem Ipsum
-                    available but the majority have suffered alteration in some form.
+                <p class="text-gray-500 dark:text-gray-400 text-xl">Estos son algunos de los proyectos que estamos
+                    desarrollando en Ditso Labs.
                 </p>
             </div>
             <div class="mt-10">
@@ -136,11 +134,9 @@
                             </div>
                             <div class="text-center">
                                 <h3 class="heading text-2xl mb-2 leading-normal">
-                                    Crafted for Startups
+                                    Ditso IDE
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">IDE para el desarrollo en FPGAs de la familia Ditso.
                                 </p>
                             </div>
                         </div>
@@ -156,11 +152,9 @@
                             </div>
                             <div class="text-center">
                                 <h3 class="heading text-2xl mb-2 leading-normal">
-                                    High-quality Design
+                                    Ditso Integra
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Proyecto para la integración de FPGAs de código abierto en el Ditso IDE.
                                 </p>
                             </div>
                         </div>
@@ -175,12 +169,9 @@
                                 </svg>
                             </div>
                             <div class="text-center">
-                                <h3 class="heading text-2xl mb-2 leading-normal">All
-                                    Essential Components
+                                <h3 class="heading text-2xl mb-2 leading-normal">Familia Ditso
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Familia de FPGAs de código abierto desarrolladas por Ditso Labs.
                                 </p>
                             </div>
                         </div>
