@@ -187,11 +187,9 @@
                             </div>
                             <div class="text-center">
                                 <h3 class="heading text-2xl mb-2 leading-normal">
-                                    Speed Optimized
+                                    Ditso Workflow
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Desarrollo de un workflow para la generacion automatica de los archivos GDSII para la fabricación de FPGAs.
                                 </p>
                             </div>
                         </div>
@@ -207,11 +205,9 @@
                             </div>
                             <div class="text-center">
                                 <h3 class="heading text-2xl mb-2 leading-normal">
-                                    Fully Customizable
+                                    Ditso ASIC
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Integrar al Ditso IDE la posibilidad de generar archivos GDSII para la fabricación de ASICs
                                 </p>
                             </div>
                         </div>
@@ -227,11 +223,10 @@
                             </div>
                             <div class="text-center">
                                 <h3 class="heading text-2xl mb-2 leading-normal">
-                                    Regular Updates
+                                    Ditso ecosystem
                                 </h3>
-                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">Tuae nam ex similique
-                                    incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam
-                                    perferendis earum sapiente non tempore? Fugit repellat ut maiores.
+                                <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
+                                Desarrollo de todo el sistema de herramientas y equipos para la fabricación de ASICs de codigo abierto en Latinoamerica.
                                 </p>
                             </div>
                         </div>
