@@ -40,9 +40,9 @@ defaults:
     image: true
 
 collections:
-  events:
+  en:
     output: true
-    permalink: /events/:path/
+    permalink: /en/:path/
   posts:
     output: true
     permalink: /posts/:path/
