@@ -1,5 +1,4 @@
 ---
-permalink: /
 ---
 <div class="main" id="main">
     <div class="relative flex items-center h-screen px-4 lg:px-0 bg-white dark:bg-dark" id="slider">
