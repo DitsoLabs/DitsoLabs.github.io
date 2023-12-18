@@ -1,3 +1,6 @@
+---
+permalink: /
+---
 <div class="main" id="main">
     <div class="relative flex items-center h-screen px-4 lg:px-0 bg-white dark:bg-dark" id="slider">
         <div class="sticky z-10 w-full lg:w-2/5 2xl:w-1/2 mx-auto text-center mt-20">
