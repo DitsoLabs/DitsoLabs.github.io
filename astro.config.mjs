@@ -8,5 +8,14 @@ export default defineConfig({
   site: 'https://astronaut.github.io',
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            gsap: ['gsap'],
+          },
+        },
+      },
+    },
   },
 });
