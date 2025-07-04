@@ -1,0 +1,104 @@
+---
+// Contact Section Component
+---
+
+<section id="contact" class="relative py-24 px-6 bg-gray-900 text-white min-h-screen z-5">
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-black/80 z-5"></div>
+  <!-- Content -->
+  <div class="relative z-5 max-w-4xl mx-auto scroll-section">
+    <h2 class="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6">Let's Build Something Amazing</h3>
+          <p class="text-gray-300 mb-6">
+            Ready to turn your innovative ideas into reality? Whether you need robotics solutions, AI integration, or hardware development, we're here to help you grow your vision from seed to success.
+          </p>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-[#0F62FE] rounded-lg flex items-center justify-center">
+              <span class="text-white text-xl">📧</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Email</h4>
+              <p class="text-gray-300">hello@ditsolabs.com</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-[#0F62FE] rounded-lg flex items-center justify-center">
+              <span class="text-white text-xl">📍</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Location</h4>
+              <p class="text-gray-300">San José, Costa Rica</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-[#0F62FE] rounded-lg flex items-center justify-center">
+              <span class="text-white text-xl">🌐</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Follow Us</h4>
+              <div class="flex space-x-3 mt-1">
+                <a href="https://github.com/ditso-labs" class="text-[#0F62FE] hover:text-blue-400 transition-colors">GitHub</a>
+                <a href="#" class="text-[#0F62FE] hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="#" class="text-[#0F62FE] hover:text-blue-400 transition-colors">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm">
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" 
+                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#0F62FE] transition-colors"
+                   placeholder="Your Name">
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" 
+                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#0F62FE] transition-colors"
+                   placeholder="your@email.com">
+          </div>
+          
+          <div>
+            <label for="project" class="block text-sm font-medium mb-2">Project Type</label>
+            <select id="project" name="project" 
+                    class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#0F62FE] transition-colors">
+              <option value="">Select a project type</option>
+              <option value="robotics">Robotics Development</option>
+              <option value="ai">AI & Machine Learning</option>
+              <option value="hardware">Hardware Solutions</option>
+              <option value="consulting">Consulting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" 
+                      class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#0F62FE] transition-colors"
+                      placeholder="Tell us about your project..."></textarea>
+          </div>
+          
+          <button type="submit" 
+                  class="w-full bg-[#0F62FE] text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

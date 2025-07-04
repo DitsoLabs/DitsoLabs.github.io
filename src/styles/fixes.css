@@ -1,0 +1,48 @@
+/* Estilos para asegurar que las partículas no bloqueen eventos */
+#particles-container {
+  pointer-events: none !important;
+}
+
+#particles-container canvas {
+  pointer-events: none !important;
+}
+
+/* Solo elementos interactivos o con hover por encima de partículas */
+a,
+button,
+[class*="hover"],
+.bg-gray-800\/50,
+.bg-gray-900\/50,
+.cta-button,
+nav,
+header,
+form,
+input,
+select,
+textarea,
+.grid > div {
+  position: relative;
+  z-index: 40 !important;
+  pointer-events: auto !important;
+}
+
+/* Específicamente las tarjetas de proyectos encima de partículas */
+#projects .grid > div,
+.project-card,
+#projects .bg-gray-900\/50 {
+  position: relative;
+  z-index: 60 !important;
+  pointer-events: auto !important;
+}
+
+/* Los textos normales y títulos por debajo de partículas */
+h1, h2, h3, h4, h5, h6, p {
+  position: relative;
+  z-index: 5;
+}
+
+/* Mantener hero section como está */
+.hero-section {
+  position: relative;
+  z-index: 30;
+}

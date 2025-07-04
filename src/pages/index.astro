@@ -1,0 +1,266 @@
+---
+// Import global styles and components
+import '../styles/global.css';
+import '../styles/fixes.css';
+import Header from '../components/Header.astro';
+import BackgroundElements from '../components/BackgroundElements.astro';
+import HeroSection from '../components/HeroSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import TeamSection from '../components/TeamSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<script>
+  // Import GSAP and plugins
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+  import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+
+  // Register GSAP plugins
+  gsap.registerPlugin(ScrollTrigger, TextPlugin, DrawSVGPlugin, ScrambleTextPlugin);
+
+  // Hero section element animations
+  const animateHeroElements = () => {
+    gsap.to('.hero-subtitle', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: 'power2.out'
+    });
+
+
+    gsap.to('.hero-title', {
+      duration: 2,
+      scrambleText: "Seed. Build. Innovate.",
+      ease: "power1.inOut",
+      delay: 0.5,
+      opacity: 1
+    });
+  };
+
+  // Scroll-triggered section animations
+  const animateScrollSections = () => {
+    gsap.from('.scroll-section h2', {
+      scrollTrigger: {
+        trigger: '.scroll-section h2',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+
+    gsap.from('.scroll-section p', {
+      scrollTrigger: {
+        trigger: '.scroll-section p',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      delay: 0.2,
+      ease: 'power2.out'
+    });
+  };
+
+  // Smooth parallax transitions without flip effects
+  const initParallaxEffect = () => {
+    // Smooth parallax for hero elements
+    gsap.to('.parallax-element', {
+      y: -100,
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+        markers: false
+      }
+    });
+
+    // Hero section moves up smoothly when scrolling
+    gsap.to('.hero-section', {
+      y: -200,
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1.5,
+        markers: false
+      }
+    });
+
+    // Video + Overlay wrapper parallax (move together as a unit)
+    gsap.to('.hero-video-wrapper', {
+      y: -150,
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 2,
+        markers: false
+      }
+    });
+  };
+
+  // SVG logo drawing animation
+  const animateSVGLogo = () => {
+    const tl = gsap.timeline({
+      repeat: -1,
+      defaults: { duration: 3, ease: 'power1.inOut' }
+    });
+
+    tl.set('#svg-stage', { opacity: 1 })
+      .from('path', { drawSVG: '0% 0%' })
+      .to('path', { drawSVG: '100% 100%' });
+  };
+
+  // Particles.js initialization - always active
+  const initializeParticles = () => {
+    if (typeof tsParticles !== 'undefined') {
+      // Initialize particles (always visible)
+      tsParticles.load("particles-container", {
+        background: {
+          color: {
+            value: "transparent",
+          },
+        },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: {
+              enable: false,
+              mode: "push",
+            },
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            resize: true,
+          },
+          modes: {
+            push: {
+              quantity: 4,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+          },
+        },
+        particles: {
+          color: {
+            value: "#FFFFFF",
+          },
+          links: {
+            color: "#FFFFFF",
+            distance: 150,
+            enable: true,
+            opacity: 1,
+            width: 1,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          number: {
+            density: {
+              enable: true,
+              area: 800,
+            },
+            value: 80,
+          },
+          opacity: {
+            value: 0.7,
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: { min: 1, max: 3 },
+          },
+        },
+        detectRetina: true,
+      }).then(() => {
+        // Keep particles always visible
+        const particlesContainer = document.getElementById('particles-container');
+        if (particlesContainer) {
+          particlesContainer.style.opacity = '1';
+          particlesContainer.style.pointerEvents = 'auto';
+        }
+      });
+    }
+  };
+
+ 
+  // Initialize all animations when the page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    animateHeroElements();
+    animateScrollSections();
+    animateSVGLogo();
+    initializeParticles();
+    initParallaxEffect();
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ditso Labs - Seed. Build. Innovate.</title>
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+  
+  <body class="bg-black font-sans relative">
+    <!-- Background Elements -->
+    <BackgroundElements />
+    
+    <!-- Navigation -->
+    <Header />
+    
+    <!-- Hero Section -->
+    <HeroSection />
+    
+    <!-- About Section -->
+    <AboutSection />
+    
+    <!-- Services Section -->
+    <ServicesSection />
+    
+    <!-- Projects Section -->
+    <ProjectsSection />
+    
+    <!-- Team Section -->
+    <TeamSection />
+    
+    <!-- Contact Section -->
+    <ContactSection />
+    
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>

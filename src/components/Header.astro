@@ -1,0 +1,184 @@
+---
+// Navigation Header Component - Refactored
+---
+
+<header id="main-navbar" class="absolute top-6 left-1/2 -translate-x-1/2 w-[95vw] max-w-4xl z-30 border border-gray-200/20 dark:border-gray-700/20 rounded-2xl shadow-2xl px-6 py-3 flex items-center justify-between transition-all duration-300"
+  style="backdrop-filter: blur(20px) saturate(180%) brightness(120%); background-color: rgba(0,0,0,0.7);">
+  
+  <!-- Logo & Brand -->
+  <a href="#hero" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <img src="/logo_leaf.svg" class="h-8" alt="Ditso Logo">
+    <span id="brand-text" class="self-center text-xl font-bold whitespace-nowrap text-white">Ditso Labs</span>
+  </a>
+  
+  <!-- Mobile Menu Toggle -->
+  <button id="mobile-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-gray-100/10 focus:outline-none focus:ring-2 focus:ring-gray-200/20 transition-colors" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+    </svg>
+  </button>
+  
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex md:items-center md:space-x-8">
+    <a href="#hero" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">Inicio</a>
+    <a href="#about" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">About</a>
+    <a href="#services" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">Services</a>
+    <a href="#projects" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">Projects</a>
+    <a href="#team" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">Team</a>
+    <a href="#contact" class="block py-2 px-3 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/5">Contact</a>
+   </nav>
+  
+  <!-- Mobile Navigation -->
+  <nav id="mobile-menu" class="hidden absolute top-full left-0 right-0 mt-2 bg-black/80 border border-gray-700/20 rounded-xl backdrop-blur-lg p-4 md:hidden">
+    <ul class="space-y-3">
+      <li><a href="#hero" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">Inicio</a></li>
+      <li><a href="#about" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">About</a></li>
+      <li><a href="#services" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">Services</a></li>
+      <li><a href="#projects" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">Projects</a></li>
+      <li><a href="#team" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">Team</a></li>
+      <li><a href="#contact" class="block py-3 px-4 text-white/80 rounded-lg transition-colors duration-200 hover:text-blue-400 hover:bg-white/10">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    #brand-text,
+    #cta-button {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  class NavbarController {
+    constructor() {
+      this.navbar = document.getElementById('main-navbar');
+      this.hero = document.getElementById('hero');
+      this.mobileToggle = document.getElementById('mobile-toggle');
+      this.mobileMenu = document.getElementById('mobile-menu');
+      this.navLinks = document.querySelectorAll('a[href^="#"]');
+      
+      this.init();
+    }
+    
+    init() {
+      this.setupSmoothScroll();
+      this.setupMobileMenu();
+      this.setupStickyBehavior();
+      this.setupResponsiveBehavior();
+    }
+    
+    setupSmoothScroll() {
+      this.navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href?.startsWith('#')) {
+            e.preventDefault();
+            this.scrollToSection(href.slice(1));
+            this.closeMobileMenu();
+          }
+        });
+      });
+    }
+    
+    setupMobileMenu() {
+      this.mobileToggle?.addEventListener('click', () => {
+        this.toggleMobileMenu();
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!this.navbar?.contains(e.target)) {
+          this.closeMobileMenu();
+        }
+      });
+    }
+    
+    setupStickyBehavior() {
+      if (!this.navbar || !this.hero) return;
+      
+      const handleScroll = () => {
+        const heroRect = this.hero.getBoundingClientRect();
+        const isHeroVisible = heroRect.bottom > 0;
+        
+        if (!isHeroVisible) {
+          this.makeSticky();
+        } else {
+          this.makeFloating();
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll(); // Initial check
+    }
+    
+    setupResponsiveBehavior() {
+      const mediaQuery = window.matchMedia('(max-width: 767px)');
+      
+      const handleResize = () => {
+        if (!mediaQuery.matches) {
+          this.closeMobileMenu();
+        }
+      };
+      
+      mediaQuery.addEventListener('change', handleResize);
+    }
+    
+    scrollToSection(targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const y = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+    
+    toggleMobileMenu() {
+      if (this.mobileMenu) {
+        this.mobileMenu.classList.toggle('hidden');
+        const isExpanded = !this.mobileMenu.classList.contains('hidden');
+        this.mobileToggle?.setAttribute('aria-expanded', isExpanded.toString());
+      }
+    }
+    
+    closeMobileMenu() {
+      if (this.mobileMenu && !this.mobileMenu.classList.contains('hidden')) {
+        this.mobileMenu.classList.add('hidden');
+        this.mobileToggle?.setAttribute('aria-expanded', 'false');
+      }
+    }
+    
+    makeSticky() {
+      if (this.navbar) {
+        Object.assign(this.navbar.style, {
+          position: 'fixed',
+          top: '0',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: '50',
+          boxShadow: '0 8px 32px 0 rgba(0,0,0,0.4)'
+        });
+      }
+    }
+    
+    makeFloating() {
+      if (this.navbar) {
+        Object.assign(this.navbar.style, {
+          position: 'absolute',
+          top: '1.5rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: '30',
+          boxShadow: '0 4px 16px 0 rgba(0,0,0,0.25)'
+        });
+      }
+    }
+  }
+  
+  // Initialize when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    new NavbarController();
+  });
+</script>
